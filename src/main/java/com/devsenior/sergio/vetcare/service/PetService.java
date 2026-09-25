@@ -7,14 +7,15 @@ import java.util.List;
 
 public interface PetService {
 
-    List<PetResponseDTO> findByIdOwner(Long idOwner);
-    PetResponseDTO save(PetRequestDTO pet);
+    List<PetResponseDTO> findByOwnerId(Long ownerId);
+    PetResponseDTO create(PetRequestDTO pet);
     List<PetResponseDTO> findAll();
     void delete(Long id);
-    PetResponseDTO update(PetRequestDTO pet);
+    PetResponseDTO update(Long id, PetRequestDTO pet);
     PetResponseDTO findById(Long id);
-    List<PetResponseDTO> FindByBreed(String breed);
-    List<PetResponseDTO> findByOwnerIdNumber(String idNumber);
+    List<PetResponseDTO> findByBreed(String breed);
+    List<PetResponseDTO> findByOwnerIdNumber(String ownerIdNumber);
+    PetResponseDTO findByAppointmentId(Long appointmentId);
 
 
 }

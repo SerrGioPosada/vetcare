@@ -1,5 +1,6 @@
 package com.devsenior.sergio.vetcare.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -44,9 +45,11 @@ public class Appointment {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "pet_id", nullable = false)
+    @JsonIgnore
     private Pet pet;
 
     @ManyToOne(optional = false)
+    @JsonIgnore
     @JoinColumn(name = "vet_idNumber", nullable = false)
     private Vet vet;
 }

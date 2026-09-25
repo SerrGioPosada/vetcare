@@ -18,12 +18,12 @@ public class PetServiceImpl implements PetService {
     private final OwnerRepository ownerRepository;
 
     @Override
-    public List<PetResponseDTO> findByIdOwner(Long idOwner) {
+    public List<PetResponseDTO> findByOwnerId(Long ownerId) {
         return List.of();
     }
 
     @Override
-    public PetResponseDTO save(PetRequestDTO pet) {
+    public PetResponseDTO create(PetRequestDTO pet) {
         return null;
     }
 
@@ -38,7 +38,7 @@ public class PetServiceImpl implements PetService {
     }
 
     @Override
-    public PetResponseDTO update(PetRequestDTO pet) {
+    public PetResponseDTO update(Long id, PetRequestDTO pet) {
         return null;
     }
 
@@ -48,12 +48,17 @@ public class PetServiceImpl implements PetService {
     }
 
     @Override
-    public List<PetResponseDTO> FindByBreed(String breed) {
+    public List<PetResponseDTO> findByBreed(String breed) {
         return List.of();
     }
 
     @Override
     public List<PetResponseDTO> findByOwnerIdNumber(String idNumber) {
         return List.of();
+    }
+
+    @Override
+    public PetResponseDTO findByAppointmentId(Long appointmentId) {
+        return null;
     }
 }

@@ -1,20 +1,16 @@
 package com.devsenior.sergio.vetcare.model.dto.response;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
 import lombok.Builder;
-import lombok.Data;
 
 import java.util.List;
 
-@Data
 @Builder
-public class OwnerResponseDTO {
+public record OwnerResponseDTO(
 
-    private String name;
-    private String idNumber;
-    private String phoneNumber;
-    private String email;
-
-    private List<PetResponseDTO> pets;
-}
+        Long id,
+        String name,
+        String idNumber,
+        String phoneNumber,
+        String email,
+        List<PetResponseDTO> pets
+) { }

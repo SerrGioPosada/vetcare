@@ -17,7 +17,7 @@ public class OwnerServiceImpl implements OwnerService {
 
 
     @Override
-    public OwnerResponseDTO save(OwnerRequestDTO request) {
+    public OwnerResponseDTO create(OwnerRequestDTO request) {
         return null;
     }
 
